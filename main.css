@@ -1,0 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: grey;
+}
+
+p {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+.resultsText {
+	color: red;
+}
+
+.result {
+	color: blue;
+}
+
