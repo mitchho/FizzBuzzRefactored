@@ -15,25 +15,32 @@ $(document).ready(function() {
   		var numberForFizzBuzz = parseInt($(event.currentTarget).children('input').val());
   		console.log(numberForFizzBuzz);
 
-		for (var i = 1; i < (numberForFizzBuzz + 1); i++) {
-   			//console.log(i);
-
-   			var textGameResult;
-
-   			if (((i % 3) == 0) && ((i % 5) == 0))
-   				textGameResult = "Fizz Buzz";
-   			else if ((i % 3) == 0)
-   				textGameResult = "Fizz";
-   			else if ((i % 5) == 0)
-   				textGameResult = "Buzz";
-   			else 
-   				textGameResult = i;  //  implicit type conversion ?
-
-   			console.log(textGameResult);
-
-			$("body").append("<p class = 'result'>" + textGameResult + "</p>");
-		}
+      playFizzBuzz(numberForFizzBuzz);
  
 	});
 
 });
+
+function playFizzBuzz(numberForFizzBuzz)
+{
+  for (var i = 1; i < (numberForFizzBuzz + 1); i++) {
+        //console.log(i);
+
+        var textGameResult;
+
+        if (((i % 3) == 0) && ((i % 5) == 0))
+          textGameResult = "Fizz Buzz";
+        else if ((i % 3) == 0)
+          textGameResult = "Fizz";
+        else if ((i % 5) == 0)
+          textGameResult = "Buzz";
+        else 
+          textGameResult = i;  //  implicit type conversion ?
+
+        console.log(textGameResult);
+
+      $("body").append("<p class = 'result'>" + textGameResult + "</p>");
+    }
+
+    $("body").append("<p class = 'result'>-------------</p>");
+}
